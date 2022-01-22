@@ -3,7 +3,7 @@
 ## Overview of Analysis:
 Credit risk is an inherently unbalanced classification problem, as good loans easily outnumber risky loans.  This analysis employs different techniques to train and evaluate models to predict credit risk.
 
-Techniques:
+_Techniques_:
 1. Oversampling models:
     - RandomOverSampler
     - SMOTE
@@ -16,35 +16,36 @@ Techniques:
     - EasyEnsembleClassifier
 
 ## Results:
-_Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all six machine learning models. Use screenshots of your outputs to support your results.
-
  ### NAIVE RANDOM OVERSAMPLING
- ![Naive Random OverSmplg Summary](https://user-images.githubusercontent.com/90986041/150648323-82019edd-6d67-4882-b3e3-52f62f91ca4d.png)
+    ![Naive Random OverSmplg Summary](https://user-images.githubusercontent.com/90986041/150651949-b5a05be8-f155-4ddd-9de2-93eeb7571034.png)
+ * This model may not be the best for identifying high credit risk because the accuracy, 0.657, is low and the precision (.01), recall (0.71), and low f1 score (0.02) for predicting high risk are not good enough to state that the model will be good at classifying high credit risk.
 
  ### SMOTE
- ![SMOTE Summary](https://user-images.githubusercontent.com/90986041/150648587-3f9ba990-3e95-4921-9571-6883a8a836a5.png)
+    ![SMOTE Summary](https://user-images.githubusercontent.com/90986041/150651956-7508225a-fb98-4f4d-8ef4-ab5945fa87fd.png)
+* This model did not outperform the random oversampler.  It may not be the best for identifying high credit risk because the accuracy, 0.657, is low and the precision (0.01), recall (0.63), and low f1 score (0.02) for predicting high risk are not good enough to state that the model will be good at classifying high credit risk.
 
- ### UNDERSAMPLING WITH CLUSTER CENTROID
- ![UnderSampling ClusterCentroid Summary](https://user-images.githubusercontent.com/90986041/150648644-423b7b21-a087-4672-9684-fb698e5e36c4.png)
-
+ ### UNDERSAMPLING WITH CLUSTER CENTROIDS
+    ![UnderSampling ClusterCentroid Summary](https://user-images.githubusercontent.com/90986041/150651961-a7a54ff0-633c-4b65-be2c-3236f91e5984.png)
+* This model may not be the best for identifying high credit risk because the accuracy, 0.544, is low and the precision (0.01), recall (0.69), and low f1 score (0.01) for predicting high risk are not good enough to state that the model will be good at classifying high credit risk.
+ 
  ### COMBINED APPROACH WITH SMOTEENN
- ![OverUnder Sampling SMOTEENN Summary](https://user-images.githubusercontent.com/90986041/150648672-8ff04731-6d1e-43e3-98e7-edd189a617f0.png)
+    ![OverUnder Sampling SMOTEENN Summary](https://user-images.githubusercontent.com/90986041/150651977-68ffafe6-3bcf-4e45-b47f-ef9547dd4a2c.png)
+* This model showed improvement over the previous models.  However, it may not be the best for identifying high credit risk because the accuracy, 0.688, is low and the precision (0.01), recall (0.80), and low f1 score (0.02) for predicting high risk are not good enough to state that the model will be good at classifying high credit risk.
 
  ### BALANCED RANDOM FOREST CLASSIFIER
- ![Balanced Random Classifier Summary](https://user-images.githubusercontent.com/90986041/150648716-4479164b-1ad2-4a43-82ea-0f67eb01a300.png)
+    ![Balanced Random Classifier Summary](https://user-images.githubusercontent.com/90986041/150651991-211666cc-8ab7-4c01-a864-7368fbe72e45.png)
+* This model may not be the best for identifying high credit risk.  While the accuracy, 0.789, is higher than the previous models, the precision (0.03), recall (0.70), and low f1 score (0.06) for predicting high risk are not good enough to state that the model will be good at classifying high risk.
 
  ### EASY ENSEMBLE ADABOOST
- ![Easy Ensemble AdaBoost Summary](https://user-images.githubusercontent.com/90986041/150648723-a170aff4-e422-449c-8f76-a90e223d7725.png)
-
-
- 
+    ![Easy Ensemble AdaBoost Summary](https://user-images.githubusercontent.com/90986041/150652004-d886b960-d155-4291-b3ac-00612cbfd3fa.png)
+* This model showed improvement over the previous models.  The accuracy score (0.932) and recall score (0.92) are high.  However, the precision score (0.09) is low.  The low f1 score (0.16) depict the pronounced imbalance between the recall and precision scores.  
  
 ## Summary/Recommendation:
-_Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.
+As described above, none of the results solidly support a statement that any of the models will be good at predicting credit risk.  Further model refinement is needed.  As an example, use the ranked features list created from the Random Forest Classifier model to identify features with the most impact.  Drop the irrelevant features and re-run the models.
 ___
 ## Resources:
 _Data Sources_: Credit card dataset from LendingClub, a peer-to-peer lending services company
 
-_Python Script_: 
+_Python Scripts_: 
 
 _Analyst_: S. Lewer
