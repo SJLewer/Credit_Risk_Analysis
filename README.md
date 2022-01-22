@@ -49,5 +49,7 @@ ___
 _Data Sources_: Credit card dataset from LendingClub, a peer-to-peer lending services company
 
 _Python Scripts_: 
+* https://github.com/SJLewer/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb
+* 
 
 _Analyst_: S. Lewer
