@@ -18,11 +18,11 @@ _Techniques_:
 ## Results:
  ### NAIVE RANDOM OVERSAMPLING
   ![Naive Random OverSmplg Summary](https://user-images.githubusercontent.com/90986041/150651949-b5a05be8-f155-4ddd-9de2-93eeb7571034.png)
- * This model may not be the best for identifying riksy loans because the accuracy, 0.657, is low and the precision (.01), recall (0.71), and low f1 score (0.02) for predicting high risk are not good enough to state that the model will be good at classifying high credit risk.
+ * This model may not be the best for identifying risky loans because the accuracy, 0.657, is low and the precision (.01), recall (0.71), and low f1 score (0.02) for predicting high risk are not good enough to state that the model will be good at classifying high credit risk.
 
  ### SMOTE
   ![SMOTE Summary](https://user-images.githubusercontent.com/90986041/150651956-7508225a-fb98-4f4d-8ef4-ab5945fa87fd.png)
-* This model did not outperform the random oversampler.  It may not be the best for identifying riksy loans because the accuracy, 0.657, is low and the precision (0.01), recall (0.63), and low f1 score (0.02) for predicting high risk are not good enough to state that the model will be good at classifying high credit risk.
+* This model did not outperform the random oversampler.  It may not be the best for identifying risky loans because the accuracy, 0.657, is low and the precision (0.01), recall (0.63), and low f1 score (0.02) for predicting high risk are not good enough to state that the model will be good at classifying high credit risk.
 
  ### UNDERSAMPLING WITH CLUSTER CENTROIDS
   ![UnderSampling ClusterCentroid Summary](https://user-images.githubusercontent.com/90986041/150651961-a7a54ff0-633c-4b65-be2c-3236f91e5984.png)
@@ -50,6 +50,6 @@ _Data Sources_: Credit card dataset from LendingClub, a peer-to-peer lending ser
 
 _Python Scripts_: 
 * https://github.com/SJLewer/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb
-* 
+* https://github.com/SJLewer/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb
 
 _Analyst_: S. Lewer
