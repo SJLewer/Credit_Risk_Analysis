@@ -41,9 +41,9 @@ _Techniques_:
 * This model showed improvement over the previous models.  The accuracy score (0.932) and recall score (0.92) are high.  However, the precision score (0.09) is low.  The low f1 score (0.16) depicts the pronounced imbalance between the recall and precision scores.  
  
 ## Summary/Recommendation:
-As described above, none of the results solidly support a statement that any of the models will be good at predicting credit risk.  Further model refinement is needed.  As an example, use the ranked features list created from the Random Forest Classifier model to identify features with the most impact (see link below).  Drop the irrelevant features and re-evaluate the models.
-
- * Features list excerpt: https://github.com/SJLewer/Credit_Risk_Analysis/blob/main/Sorted%20Features.png
+As described above, none of the results solidly support a statement that any of the models will be good at predicting credit risk.  Further model refinement is needed.  Examples for consideration:  
+* Stratify the dataset to divide it proportionately when splitting the dataset into training and testing sets.
+* Use the ranked features list created from the Random Forest Classifier model to identify features with the most impact.  Drop the irrelevant features and re-evaluate the models. (Features list excerpt: https://github.com/SJLewer/Credit_Risk_Analysis/blob/main/Sorted%20Features.png)
 ___
 ## Resources:
 _Data Sources_: Credit card dataset from LendingClub, a peer-to-peer lending services company
